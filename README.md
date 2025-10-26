@@ -20,6 +20,8 @@ chmod +x main.sh
 ./main.sh | cut -d# -f1 # remove pricing and tags
 ```
  
+![image](docs/image.png)
+
 ## Explanation
 
 I do use several tags for keeping track on what I will buy or proxy and what I already bought and is still on track or in my collection
