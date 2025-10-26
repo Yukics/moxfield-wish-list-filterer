@@ -36,22 +36,25 @@ Also I have several global tags that i do not want to filter by, so I add them t
 ```
 ALL PROXYS 33
 
-1 Ancient Brass Dragon (clb) 367			CT:40.0300€  CK:47.9900€ 
-1 Ancient Copper Dragon (clb) 368			CT:83.3100€  CK:119.9900€ 
+Cant  Name                        Set    CN    CardTrader  CardMarket
+1     Ancient Brass Dragon        (clb)  367   40.03€      47.99€
+1     Ancient Copper Dragon       (clb)  368   83.31€      119.99€
 ...
 
 ALL BOUGHT 34
 
-1 Access Tunnel (mkc) 247 tags:kaalia, noart
-1 Angel of Despair (sld) 1564 tags:kaalia
+Cant  Name                                        Set    CN    Tags
+1     Access Tunnel                               (mkc)  247   tags:kaalia, noart
+1     Angel of Despair                            (sld)  1564  tags:kaalia
 ...
 
 PENDING
 
 AZLASK 2
 
-1 Kozilek's Predator (2xm) 173 			 # CardTrader: 0.1200€ CardMarket: 0.3500€
-1 Nest Invader (pca) 69 			 # CardTrader: 0.4500€ CardMarket: 0.4900€
+Cant  Name                Set    CN      CardTrader  CardMarket
+1     Kozilek's Predator  (2xm)  173  #  0.12€       0.35€
+1     Nest Invader        (pca)  69   #  0.45€       0.49€
 ...
 ```
 
@@ -60,24 +63,26 @@ AZLASK 2
 ```
 ALL PROXYS 33
 
-1 Ancient Brass Dragon (clb) 367			CT:40.0300€  CK:47.9900€ 
-1 Ancient Copper Dragon (clb) 368			CT:83.3100€  CK:119.9900€ 
+Cant  Name                        Set    CN    CardTrader  CardMarket
+1     Ancient Brass Dragon        (clb)  367   40.03€      47.99€
+1     Ancient Copper Dragon       (clb)  368   83.31€      119.99€
 ...
 
 ALL BOUGHT 34
 
-1 Access Tunnel (mkc) 247 tags:kaalia, noart
-1 Angel of Despair (sld) 1564 tags:kaalia
+Cant  Name                                        Set    CN    Tags
+1     Access Tunnel                               (mkc)  247   tags:kaalia, noart
+1     Angel of Despair                            (sld)  1564  tags:kaalia
 ...
 
 PENDING
 
 AZLASK 2
 
-| Cant | Name               | Set   | CN  | CardTrader | CardMarket |
-| ---- | ------------------ | ----- | --- | ---------- | ---------- |
-| 1    | Kozilek's Predator | (2xm) | 173 | 0.1200€    | 0.3500€    |
-| 1    | Nest Invader       | (pca) | 69  | 0.4500€    | 0.4900€    |
+| Cant | Name               | Set   | CN  | # | CardTrader | CardMarket |
+| ---- | ------------------ | ----- | --- | - | ---------- | ---------- |
+| 1    | Kozilek's Predator | (2xm) | 173 | # | 0.12€      | 0.35€      |
+| 1    | Nest Invader       | (pca) | 69  | # | 0.45€      | 0.49€      |
 ...
 ```
 

@@ -60,9 +60,9 @@ for TAG in $(cat intermediate/tags.json | jq '.[]."card.tags"[]' | sort -u | tr 
 	echo "$(echo $TAG | sed 's/.*/\U&/g') $(cat tagged/$TAG.json | wc -l)"
 	echo
 	if [[ "$1" == "table" ]]; then
-		{ echo "Cant;Name;Set;CN;;CardTrader;CardMarket"; cat tagged/$TAG.json; } | csvlook --no-inference
+		{ echo "Cant;Name;Set;CN;#;CardTrader;CardMarket"; cat tagged/$TAG.json; } | csvlook --no-inference
 	else
-		{ echo "Cant;Name;Set;CN;;CardTrader;CardMarket"; cat tagged/$TAG.json; } | column -s ';' -t
+		{ echo "Cant;Name;Set;CN;#;CardTrader;CardMarket"; cat tagged/$TAG.json; } | column -s ';' -t
 	fi
 	echo
 done
