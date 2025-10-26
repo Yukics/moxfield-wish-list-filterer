@@ -4,7 +4,7 @@
 2. Go to: [https://moxfield.com/wishlist](https://moxfield.com/wishlist)
 3. Search request https://api2.moxfield.com/v2/wishlist
 4. Right click -> Copy -> Copy reponse
-5. Paste as response.json on `src/` folder
+5. Paste as a new file named `response.json` on `src/` folder
 6. Execute by:
 ```shell
 # requirements jq and csvkit
