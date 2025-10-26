@@ -17,6 +17,7 @@ chmod +x main.sh
 ./main.sh -t            # md table format
 ./main.sh -bh           # show only bought cards
 ./main.sh -ph           # show only proxy cards
+./main.sh -n            # remove set and cn from output
 ./main.sh | cut -d# -f1 # remove pricing and tags
 ```
  
