@@ -19,10 +19,10 @@ chmod +x main.sh
 
 I do use several tags for keeping track on what I will buy or proxy and what I already bought and is still on track or in my collection
 
-#proxy: means I will not buy that card, probably because it is expensive
-#noart: means I do not care the art of that card so any collection is good
-#bought: means I already bought it, I am waiting fot its arrival. Once they are on my hands I add them to my collection and remove it from wish list
-#decktag: means that card is for <decktag> deck. This kind of tag is used when I am buying new cards, to segregate and prioritize 
++ #proxy: means I will not buy that card, probably because it is expensive
++ #noart: means I do not care the art of that card so any collection is good
++ #bought: means I already bought it, I am waiting fot its arrival. Once they are on my hands I add them to my collection and remove it from wish list
++ #decktag: means that card is for <decktag> deck. This kind of tag is used when I am buying new cards, to segregate and prioritize 
 
 Also I have several global tags that i do not want to filter by, so I add them to the script `BASIC_FILTER` variable, ex: destroy, counter and tutor. Feel free to modify
 
