@@ -11,9 +11,10 @@
 sudo apt update && sudo apt install -y jq csvkit # for ubuntu, you might use WSL on Windows
 cd src
 chmod +x main.sh
+
 # options
-./main.sh 	    # list format
-./main.sh table # md table format
+./main.sh 	            # list format
+./main.sh table         # md table format
 ./main.sh | cut -d# -f1 # remove pricing
 ```
  
