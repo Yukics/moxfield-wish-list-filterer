@@ -10,13 +10,15 @@ PROXY="no"
 BOUGHT="no"
 TABLE="no"
 HIDE="no"
+NOART="no"
 
-while getopts "tpbh" opt; do
+while getopts "tpbhn" opt; do
   case $opt in
     t) TABLE="yes" ;;
     p) PROXY="yes" ;;
     b) BOUGHT="yes" ;;
 	h) HIDE="yes" ;;
+	n) NOART="yes" ;;
     \?)
       echo "Error: Invalid option -$OPTARG"
       usage
@@ -84,8 +86,19 @@ for TAG in $(cat intermediate/tags.json | jq '.[]."card.tags"[]' | sort -u | tr 
 		and (.["card.tags"] | index("bought") | not))
 		| select(has("card.name"))
 		| "\(."quantity");\(."card.name");(\(."card.set"));\(."card.cn");#;\(."card.prices.ct")€;\(."card.prices.ck")€;\(.["card.tags"] | join(","))"' | tr -d '"' > tagged/$TAG.json
+	
+	# NOART removes set and cn info if requested
+	if [[ "$NOART" == "yes" ]]; then
+	while IFS= read -r line; do
+    	if echo "$line" | grep -qw "noart"; then
+			echo "$line" | awk -F';' 'BEGIN{OFS=";"} {$3=""; print}' | awk -F';' 'BEGIN{OFS=";"} {$4=""; print}'
+		else
+			echo "$line"
+		fi
+	done < tagged/$TAG.json > tagged/$TAG.tmp && mv tagged/$TAG.tmp tagged/$TAG.json
+	fi
 
-	echo "$(echo $TAG | sed 's/.*/\U&/g') $(cat tagged/$TAG.json | wc -l)"
+	echo "~ $(echo $TAG | sed 's/.*/\U&/g') $(cat tagged/$TAG.json | wc -l) ~"
 	echo
 	HEADER="Cant;Name;Set;CN;#;CardTrader;CardMarket;Tags"
 	if [[ "$TABLE" == "yes" ]]; then
