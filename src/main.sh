@@ -42,7 +42,7 @@ cat intermediate/merge.json | jq -r '.[]
 		| select(.["card.tags"] | index("bought"))
 		| .["card.tags"] |= map(select(. != "bought"))
 		| select(has("card.name"))
-		| "\(.quantity);\(."card.name");(\(."card.set"));\(."card.cn");tags:\(.["card.tags"] | join(", "))"'; } | column -s ';' -t
+		| "\(.quantity);\(."card.name");(\(."card.set"));\(."card.cn");tags:\(.["card.tags"] | join(","))"'; } | column -s ';' -t
 echo
 
 echo "PENDING"
